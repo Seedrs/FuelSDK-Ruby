@@ -202,7 +202,9 @@ module MarketingCloudSDK
             raise_errors: false,
             log: @debug,
             open_timeout:180,
-            read_timeout: 180
+            read_timeout: 180,
+            ssl_version: :TLSv1,
+            ssl_verify_mode: :none
           )
         else
           self.refreshToken
@@ -267,7 +269,9 @@ module MarketingCloudSDK
             endpoint: @endpoint,
             wsse_auth: ["*", "*"],
             raise_errors: false,
-            log: @debug
+            log: @debug,
+            ssl_version: :TLSv1,
+            ssl_verify_mode: :none
           )
 
         rescue Exception => e

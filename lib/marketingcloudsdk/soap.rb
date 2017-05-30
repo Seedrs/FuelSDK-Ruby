@@ -144,7 +144,9 @@ module MarketingCloudSDK
 				raise_errors: false,
 				log: debug,
 				open_timeout:180,
-				read_timeout: 180
+				read_timeout: 180,
+				ssl_version: :TLSv1,
+				ssl_verify_mode: :none
 			)
 		end
 
